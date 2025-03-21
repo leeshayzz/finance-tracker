@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bizim Finansal Durumum</h1>
+        
+        <!-- Show the current month -->
+        <p class="month">📅 Current Month: <span id="current-month"></span></p>
+        
+        <p class="balance">Total Balance: <span id="balance">₨0.00</span></p>
+        
+        <!-- Summary text now reflects only the current month's earnings & spending -->
+        <p id="summary" class="summary-text">
+            <span id="month-summary">Loading...</span>
+        </p>
+
+        <div class="transaction-form">
+            <input type="number" id="amount" placeholder="Amount (₨)" aria-label="Enter amount">
+            <input type="text" id="category" placeholder="Category" aria-label="Enter category">
+            <button class="income-btn" onclick="addTransaction('income')">Add Income</button>
+            <button class="expense-btn" onclick="addTransaction('expense')">Add Expense</button>
+            <button class="remove-btn" onclick="removeLastTransaction()">Remove Last Transaction</button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Set current month in UI on page load
+        document.getElementById("current-month").innerText = new Date().toLocaleString("en-US", { month: "long" });
+    </script>
+</body>
+</html>

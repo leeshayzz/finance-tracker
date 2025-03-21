@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #F8FBF8;
+    color: #2D3A2E;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    max-width: 380px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin: auto;
+}
+
+/* Title */
+h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1B5E20;
+    margin-bottom: 10px;
+}
+
+/* Balance Display */
+.balance {
+    font-size: 24px;
+    font-weight: bold;
+    color: #388E3C;
+    margin-bottom: 5px;
+}
+
+/* Summary Text */
+.summary-text {
+    font-size: 16px;
+    color: #4A6D48;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* Form Inputs */
+.transaction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.transaction-form input {
+    width: 93%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #A5D6A7;
+    border-radius: 40px;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.transaction-form input:focus {
+    border-color: #388E3C;
+}
+
+/* Buttons */
+button {
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.income-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.expense-btn {
+    background: #E53935;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Transaction List */
+.transaction-list {
+    padding: 0;
+    margin-top: 15px;
+}
+
+.transaction-list li {
+    background: #ECF8EC;
+    margin-bottom: 8px;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.transaction-list li:hover {
+    background: #D5E8D4;
+}
+
+.transaction-list button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #E53935;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .balance {
+        font-size: 20px;
+    }
+
+    .summary-text {
+        font-size: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
